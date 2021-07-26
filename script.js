@@ -53,15 +53,4 @@ const pintarCard = (pokemon) => {
   button.addEventListener("click", _ => {
     location.reload();
   })
-
-  
-VanillaTilt.init(document.querySelector(".card"), {
-  max: 25,
-  speed: 400
-});
-
-VanillaTilt.init(document.querySelector(".recargar"), {
-  max: 35,
-  speed: 400
-});
 };
