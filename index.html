@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,25 +20,22 @@
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
     <link rel="stylesheet" href="style.css" />
     <title>Card - Random Pokemon</title>
-    <script src="script.js"></script>
   </head>
   <body>
-
-    <main class="container">
-
-      <button class="recargar animate__animated animate__backInUp">
-        Ver otro Pokemon
-      </button>
-    </main>
+    <div class="content-loaded">
+      <div class="loader"></div>
+    </div>
+    <main class="container"></main>
 
     <template id="template-card">
-      <article class="card animate__animated animate__backInDown">
+      <article
+        class="card"
+        data-tilt
+        data-tilt-glare
+        data-tilt-max-glare="0.95"
+      >
         <img
           class="card__header"
           src="./images/bg-pattern-card.svg"
@@ -69,7 +66,10 @@
           </div>
         </footer>
       </article>
+      <button class="recargar">Ver otro Pokemon</button>
     </template>
 
+    <script src="script.js"></script>
+    <script type="text/javascript" src="vanilla-tilt.min.js"></script>
   </body>
 </html>

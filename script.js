@@ -18,6 +18,7 @@ const fetchData = async (e) => {
       pintarCard(o);
     } catch (e) {
       console.log(e);
+      alert("Parece que ocurrio un error, intentelo de nuevo");
     }
   },
   pintarCard = (e) => {
@@ -42,4 +43,10 @@ const fetchData = async (e) => {
       button.addEventListener("click", () => {
         location.reload();
       });
+    VanillaTilt.init(document.querySelector(".card"), {
+      max: 20,
+      speed: 3400,
+    });
+    const contentLoaded = document.querySelector(".content-loaded").classList.add("toggle");
+    const loader = document.querySelector(".loader").classList.add("toggle");
   };
