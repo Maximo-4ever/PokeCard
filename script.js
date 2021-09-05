@@ -47,6 +47,8 @@ const fetchData = async (e) => {
       max: 20,
       speed: 3400,
     });
-    const contentLoaded = document.querySelector(".content-loaded").classList.add("toggle");
-    const loader = document.querySelector(".loader").classList.add("toggle");
+    setInterval(() => {
+      const contentLoaded = document.querySelector(".content-loaded").classList.add("toggle");
+      const loader = document.querySelector(".loader").classList.add("toggle");
+    }, 500);
   };
